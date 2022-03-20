@@ -6,4 +6,4 @@ def twoNumberSum(array, targetSum):
 		except:
 			continue
 	return []
-    pass
+	pass
