@@ -1,0 +1,10 @@
+def moveElementToEnd(array, toMove):
+    count = 0
+    i = 0
+    while i < len(array):
+        if array[i] == toMove:
+            array.remove(toMove)
+            count += 1
+        else:
+            i += 1
+    return array + [toMove]*count
