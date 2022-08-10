@@ -1,3 +1,6 @@
+"""
+Given an array and target value, the method needs to identify all instances of the target and push all of them to the end of the same array
+"""
 def moveElementToEnd(array, toMove):
     count = 0
     i = 0
