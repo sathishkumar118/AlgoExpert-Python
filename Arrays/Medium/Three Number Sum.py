@@ -1,6 +1,6 @@
 """
 Problem Statement:
-A method that takes in a non-empty array which identifies triplets in the array summing up to the targetSum with each of them arranged in ascending order
+A method that takes in a non-empty array, identifies triplets in it summing up to the given targetSum with each of them arranged in ascending order
 """
 def twoNumberSum(array,targetSum,currNum):
     res = []
