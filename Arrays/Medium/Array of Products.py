@@ -2,16 +2,14 @@
 def arrayOfProducts(array):
     # Write your code here.
     left,right = [1]*len(array),[1]*len(array)
-    res = []
+    res = [0]*len(array)
     product = 1
     for i in range(len(array)):
         left[i] = product
         product *= array[i]
     product = 1
     for i in range(len(array)-1,-1,-1):
-        right[i] = product
+        res[i]  = product * left[i]
         product *= array[i]
-    for i in range(len(array)):
-        res.append(left[i]*right[i])
     return res
     pass
