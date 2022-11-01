@@ -2,10 +2,9 @@
 """
 def firstDuplicateValue(array):
     # Write your code here.
-    cntArray = dict()
-    for item in array:
-        if item in cntArray:
-            return item
+    for i in range(len(array)):
+        if array[abs(array[i]) - 1] < 0:
+            return abs(array[i])
         else:
-            cntArray.update({item:1})
+            array[abs(array[i]) - 1] *= -1
     return -1
