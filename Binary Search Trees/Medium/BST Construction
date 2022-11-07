@@ -47,12 +47,19 @@ class BST:
             if self.value == value and self.right == None and self.left == None:
                 return self
             else:
-                return self.remove_actual(value)
-        return self
+                self.remove_actual(value)
     def remove_actual(self, value):
         if self.value == value:
             if self.right == None and self.left == None:
                 return None
+            elif self.right == None:
+                self.value = self.left.value
+                self.left = self.left.left
+                return self
+            elif self.left == None:
+                self.value = self.right.value
+                self.right = self.right.right
+                return self
             parent = self
             leftMost = self.right
             while leftMost.left != None:
@@ -60,13 +67,13 @@ class BST:
                 leftMost = leftMost.left
             leftMostValue = leftMost.value
             if leftMost.right != None:
-                print(leftMost.value)
                 leftMost.value = leftMost.right.value
                 leftMost.right = leftMost.right.right
             else:
-                print("parent.right = None")
-                print('parent.value',parent.value)
-                parent.left = None
+                if parent == self:
+                    parent.right = None
+                else:
+                    parent.left = None
             self.value = leftMostValue
         elif self.value < value and self.right != None:
             self.right = self.right.remove_actual(value)
