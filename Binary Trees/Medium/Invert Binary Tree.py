@@ -1,3 +1,5 @@
+""" A method which takes in a binary tree and returns the inverted binary tree
+"""
 def invertBinaryTree(tree):
     # Write your code here.
     if tree == None:
