@@ -8,9 +8,7 @@ class BinaryTree:
 
 
 def binaryTreeDiameter(tree):
-    # Write your code here.
     return newBinaryTreeDiameter(tree)[0]-1
-    #return -1
 
 def newBinaryTreeDiameter(tree, maxLen = 0):
     if tree == None:
