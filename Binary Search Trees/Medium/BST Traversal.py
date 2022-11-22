@@ -2,7 +2,6 @@
 Methods which traverses through the BST in three different ways :- inorder traversal, preorder traversal and postorder traversal
 """
 def inOrderTraverse(tree, array):
-    # Write your code here.
     if tree == None:
         return array
     else:
@@ -13,7 +12,6 @@ def inOrderTraverse(tree, array):
     pass
 
 def preOrderTraverse(tree, array):
-    # Write your code here.
     if tree == None:
         return array
     else:
@@ -25,7 +23,6 @@ def preOrderTraverse(tree, array):
 
 
 def postOrderTraverse(tree, array):
-    # Write your code here.
     if tree == None:
         return array
     else:
