@@ -1,15 +1,13 @@
 def minHeightBst(array, root = None):
-    root = BST(array.pop(int(len(array)/2)))
-    while len(array) > 0:
-        root.insert(array.pop(int(len(array)/2)))
+    if array == []:
+        return None
+    midIdx = int(len(array)/2)
+    leftArr = array[:midIdx]
+    rightArr = array[midIdx:]
+    root = BST(rightArr.pop(0))
+    root.left = minHeightBst(leftArr)
+    root.right = minHeightBst(rightArr)
     return root
-    pass
-
-"""def findDepth(BST):
-    if BST == None:
-        return 0
-    return 1 + max(findDepth(BST.left),findDepth(BST.right))"""
-
 
 class BST:
     def __init__(self, value):
@@ -28,3 +26,5 @@ class BST:
                 self.right = BST(value)
             else:
                 self.right.insert(value)
+        self.right = orgTree(self.right)
+        self.left = orgTree(self.left)
