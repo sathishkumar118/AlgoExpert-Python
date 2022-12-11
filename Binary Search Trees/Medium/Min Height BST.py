@@ -26,5 +26,3 @@ class BST:
                 self.right = BST(value)
             else:
                 self.right.insert(value)
-        self.right = orgTree(self.right)
-        self.left = orgTree(self.left)
