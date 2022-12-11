@@ -1,4 +1,4 @@
-def minHeightBst(array, root = None):
+def minHeightBst(array):
     if array == []:
         return None
     midIdx = int(len(array)/2)
