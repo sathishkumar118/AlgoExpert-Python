@@ -7,4 +7,4 @@ def kadanesAlgorithm(array):
             currSum = 0
         if currSum > maxSum:
             maxSum = currSum
-    return maxSum  
+    return maxSum
